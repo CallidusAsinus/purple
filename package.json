@@ -23,6 +23,7 @@
   },
   "scripts": {
     "start": "npm-run-all --parallel start-server start-client",
+    "start:prod": "npm-run-all --serial build start-server",
     "start-server": "node server.js",
     "start-client": "react-scripts start",
     "build": "react-scripts build",

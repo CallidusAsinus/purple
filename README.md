@@ -1,15 +1,44 @@
-# Getting Started with Create React App
+# purple
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Docker support
+
+Two Dockerfiles are included in this project:
+* `Dockerfile` for running the app in production mode, and
+* `dev.Dockerfile` for running the app in development mode
+
+### production
+
+The following commands will build and run the production Dockerfile:
+```
+docker build -t purple:prod .
+docker run -p 3000:3000 purple:prod
+```
+
+### development
+
+The following commands will build and run the development Dockerfile:
+```
+docker build -t purple -f dev.Dockerfile .
+docker run -p 3000:3000 -p 8080:8080 purple
+```
+
+Note that development mode uses two ports, 3000 and 8080.
 
 ## Available Scripts
 
 In the project directory, you can run:
 
+### `NODE_ENV=production npm run start:prod`
+
+Runs the app in production mode
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser. 
+
 ### `npm start`
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Open [http://localhost:8080](http://localhost:8080) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.

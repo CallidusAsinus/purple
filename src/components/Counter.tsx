@@ -9,7 +9,7 @@ const Counter = ({
     const [count, setCount] = React.useState(null); // count is null when unitialized
     const updateCounter = React.useCallback(
         async () => {
-            const response = await fetch(`http://localhost:8080/count/${id}`);
+            const response = await fetch(`http://localhost:3000/count/${id}`);
             const newCount = await response.json();
             setCount(newCount);
         },
