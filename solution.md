@@ -10,6 +10,10 @@ Assumptions:
 * The client for this app was built on top of create-react-app. This should support most features, but should more control be needed then we'll need to eject (see `npm run eject` documentation below).
 * The client and server are relatively decoupled, and should further decoupling be necessary then [npm workspaces](https://docs.npmjs.com/cli/v7/using-npm/workspaces) may be useful.
 
+## Getting started
+
+First, install dependencies with `npm i`. Check out **Available Scripts** for how to run the app.
+
 ## Docker support
 
 Two Dockerfiles are included in this project:
