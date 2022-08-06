@@ -4,5 +4,10 @@
   height: 100vh;
   flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;  
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+  .Counter {
+    margin: 0 5px;
+  }
 }

@@ -23,7 +23,7 @@ const Counter = ({
     );
     return (
         <button
-            className='Counter'
+            className={`Counter ${count === null ? 'loading' : 'loaded'}`}
             onClick={updateCounter}
         >
             <div className='count-wrapper'>

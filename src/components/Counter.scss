@@ -6,13 +6,13 @@
     align-items: center;
     background-color: $cardbackground;
     border-radius: 2px;
-
     cursor: pointer;
     border: none;
     color: $cardTextColor;
 
     &:active {
         color: $activeColor;
+        transform: scale(1.02);
     }
 
     &:hover:not(:active) {
@@ -21,9 +21,31 @@
 
     .count {
         font-size: 10vmax;
+        margin: 0 10px;
     }
 
     .label {
         font-size: 3vmax;   
+    }
+
+    // loading animation for counter
+    &.loading {
+        transform: scale(0.0);
+    }
+    @keyframes grow {
+        0% {
+            transform: scale(0.0);
+        }
+        70% {
+            transform: scale(1.05);
+        }
+        100% {
+            transform: scale(1.0);
+        }
+    }
+    &.loaded {
+        animation-name: grow;
+        animation-duration: 0.2s;
+        animation-timing-function: ease-in-out;
     }
 }
