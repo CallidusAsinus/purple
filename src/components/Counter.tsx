@@ -1,6 +1,10 @@
 import React from 'react';
 import './Counter.scss';
 
+/**
+ * Component which displays a count retrieved from the API. Clicking this component will increase the count.
+ * @param id The key correlating with the count, as retrieved from the API
+ */
 const Counter = ({
     id,
 }: {

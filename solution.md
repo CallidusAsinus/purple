@@ -1,6 +1,14 @@
 # purple
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![An image of the purple app, which is a button labeled with a count of "101" and the text "UPDATE"](/screenshot.PNG?raw=true "Purple")
+
+TODOS:
+* **Implement a better loading treatment for the Counter component.** Currently, the user doesn't get any feedback regarding requests to update the count. This would add substantial polish to the solution.
+* **Paramaterize count keys.** Each instance of the Counter component takes in a key associating it with a count. As seen in App.tsx, multiple counters are supported. Ideally keys could be parameterized via the CLI or configuration files, allowing arbitrary numbers of counts.
+
+Assumptions:
+* The client for this app was built on top of create-react-app. This should support most features, but should more control be needed then we'll need to eject (see `npm run eject` documentation below).
+* The client and server are relatively decoupled, and should further decoupling be necessary then [npm workspaces](https://docs.npmjs.com/cli/v7/using-npm/workspaces) may be useful.
 
 ## Docker support
 
@@ -15,7 +23,6 @@ The following commands will build and run the production Dockerfile:
 docker build -t purple:prod .
 docker run -p 3000:3000 purple:prod
 ```
-
 ### development
 
 The following commands will build and run the development Dockerfile:
@@ -32,7 +39,7 @@ In the project directory, you can run:
 
 ### `NODE_ENV=production npm run start:prod`
 
-Runs the app in production mode
+Runs the app in production mode\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser. 
 
 ### `npm start`
@@ -69,6 +76,8 @@ Instead, it will copy all the configuration files and the transitive dependencie
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
 ## Learn More
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
