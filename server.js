@@ -13,4 +13,7 @@ app.get('/count', async (_req, res) =>  {
     }
 });
 
-app.listen(8080);
+const PORT = 8080;
+
+app.listen(PORT);
+console.log(`start api server on port ${PORT}`);
