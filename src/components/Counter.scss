@@ -1,0 +1,29 @@
+@import '../styles/theme.scss';
+
+.Counter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $cardbackground;
+    border-radius: 2px;
+
+    cursor: pointer;
+    border: none;
+    color: $cardTextColor;
+
+    &:active {
+        color: $activeColor;
+    }
+
+    &:hover:not(:active) {
+        color: $hoverColor;
+    }
+
+    .count {
+        font-size: 10vmax;
+    }
+
+    .label {
+        font-size: 3vmax;   
+    }
+}
